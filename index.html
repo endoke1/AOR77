@@ -17,16 +17,23 @@
   a:hover { text-decoration: underline; }
   .no { width: 40px; color: #86868b; text-align: right; }
   .loading { color: #86868b; font-size: 0.85rem; }
-  .book-banner { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); background: #fafafa; flex-wrap: wrap; gap: 8px; }
-  .book-label { font-size: 0.9rem; font-weight: 600; color: var(--text); }
-  .book-link { font-size: 0.85rem; white-space: nowrap; }
+  .book-banner { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--border); background: #fafafa; }
+  .book-cover { width: 56px; height: auto; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.2); flex-shrink: 0; }
+  .book-info { flex: 1; min-width: 0; }
+  .book-label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text); }
+  .book-link { font-size: 0.82rem; white-space: nowrap; }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="book-banner">
-    <span class="book-label">高城剛『AOR77Albums』掲載アルバム</span>
-    <a class="book-link" href="https://amzn.to/4r31pFy" target="_blank" rel="noopener">Amazonで見る →</a>
+    <a href="https://amzn.to/4r31pFy" target="_blank" rel="noopener">
+      <img class="book-cover" src="https://m.media-amazon.com/images/I/61zmkj+L1QL._SL1422_.jpg" alt="AOR77Albums 書影">
+    </a>
+    <div class="book-info">
+      <span class="book-label">高城剛『AOR77Albums』掲載アルバム</span>
+      <a class="book-link" href="https://amzn.to/4r31pFy" target="_blank" rel="noopener">Amazonで見る →</a>
+    </div>
   </div>
   <table>
     <thead>
