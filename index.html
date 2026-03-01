@@ -117,22 +117,30 @@ const albums = [
 async function openAppleMusic(artist, album, linkEl) {
   linkEl.textContent = "…";
   linkEl.style.pointerEvents = "none";
+
+  // iOS Safari blocks window.open() called after await (async context).
+  // Open the window synchronously within the user gesture, then navigate it.
+  const win = window.open("", "_blank");
+
   const term = encodeURIComponent(artist + " " + album);
   try {
     const res = await fetch(
       `https://itunes.apple.com/search?term=${term}&entity=album&country=jp&limit=5`
     );
     const data = await res.json();
+    let url;
     if (data.results && data.results.length > 0) {
       const hit = data.results.find(r =>
         r.collectionName.toLowerCase().includes(album.toLowerCase())
       ) || data.results[0];
-      window.open(hit.collectionViewUrl, "_blank");
+      // Ensure Japan store URL regardless of what the API returns
+      url = hit.collectionViewUrl.replace(/music\.apple\.com\/[a-z]{2}\//, "music.apple.com/jp/");
     } else {
-      window.open(`https://music.apple.com/jp/search?term=${term}`, "_blank");
+      url = `https://music.apple.com/jp/search?term=${term}`;
     }
+    win.location.href = url;
   } catch {
-    window.open(`https://music.apple.com/jp/search?term=${term}`, "_blank");
+    win.location.href = `https://music.apple.com/jp/search?term=${term}`;
   } finally {
     linkEl.textContent = "Open";
     linkEl.style.pointerEvents = "";
