@@ -13,9 +13,10 @@
   th { background-color: #f9f9f9; font-weight: 600; white-space: nowrap; }
   tr:last-child td { border-bottom: none; }
   tr:hover { background-color: #fafafa; }
-  a { color: var(--link); text-decoration: none; font-weight: 500; }
+  a { color: var(--link); text-decoration: none; font-weight: 500; cursor: pointer; }
   a:hover { text-decoration: underline; }
-  .no { width: 50px; color: #86868b; }
+  .no { width: 40px; color: #86868b; text-align: right; }
+  .loading { color: #86868b; font-size: 0.85rem; }
 </style>
 </head>
 <body>
@@ -29,86 +30,128 @@
         <th>Apple Music</th>
       </tr>
     </thead>
-    <tbody>
-      <tr><td class="no">018</td><td>Airplay</td><td>Airplay</td><td><a href="https://music.apple.com/jp/search?term=Airplay+Airplay" target="_blank">Search</a></td></tr>
-      <tr><td class="no">022</td><td>Christopher Cross</td><td>Christopher Cross</td><td><a href="https://music.apple.com/jp/search?term=Christopher+Cross+Christopher+Cross" target="_blank">Search</a></td></tr>
-      <tr><td class="no">026</td><td>Larry John McNally</td><td>Larry John McNally</td><td><a href="https://music.apple.com/jp/search?term=Larry+John+McNally+Larry+John+McNally" target="_blank">Search</a></td></tr>
-      <tr><td class="no">028</td><td>J.D. Souther</td><td>You're Only Lonely</td><td><a href="https://music.apple.com/jp/search?term=J.D.+Souther+You%27re+Only+Lonely" target="_blank">Search</a></td></tr>
-      <tr><td class="no">032</td><td>Eagles</td><td>Hotel California</td><td><a href="https://music.apple.com/jp/search?term=Eagles+Hotel+California" target="_blank">Search</a></td></tr>
-      <tr><td class="no">036</td><td>Pages</td><td>Pages</td><td><a href="https://music.apple.com/jp/search?term=Pages+Pages" target="_blank">Search</a></td></tr>
-      <tr><td class="no">038</td><td>Player</td><td>Player</td><td><a href="https://music.apple.com/jp/search?term=Player+Player" target="_blank">Search</a></td></tr>
-      <tr><td class="no">040</td><td>Chicago</td><td>Chicago 16</td><td><a href="https://music.apple.com/jp/search?term=Chicago+Chicago+16" target="_blank">Search</a></td></tr>
-      <tr><td class="no">044</td><td>Pat Metheny Group</td><td>American Garage</td><td><a href="https://music.apple.com/jp/search?term=Pat+Metheny+Group+American+Garage" target="_blank">Search</a></td></tr>
-      <tr><td class="no">046</td><td>David Roberts</td><td>All Dressed Up</td><td><a href="https://music.apple.com/jp/search?term=David+Roberts+All+Dressed+Up" target="_blank">Search</a></td></tr>
-      <tr><td class="no">050</td><td>TOTO</td><td>TOTO IV</td><td><a href="https://music.apple.com/jp/search?term=TOTO+TOTO+IV" target="_blank">Search</a></td></tr>
-      <tr><td class="no">056</td><td>Brenda Russell</td><td>Two Eyes</td><td><a href="https://music.apple.com/jp/search?term=Brenda+Russell+Two+Eyes" target="_blank">Search</a></td></tr>
-      <tr><td class="no">058</td><td>Nick DeCaro</td><td>Italian Graffiti</td><td><a href="https://music.apple.com/jp/search?term=Nick+DeCaro+Italian+Graffiti" target="_blank">Search</a></td></tr>
-      <tr><td class="no">062</td><td>Marc Jordan</td><td>Blue Desert</td><td><a href="https://music.apple.com/jp/search?term=Marc+Jordan+Blue+Desert" target="_blank">Search</a></td></tr>
-      <tr><td class="no">066</td><td>Bill LaBounty</td><td>Bill LaBounty</td><td><a href="https://music.apple.com/jp/search?term=Bill+LaBounty+Bill+LaBounty" target="_blank">Search</a></td></tr>
-      <tr><td class="no">068</td><td>Lionel Richie</td><td>Can't Slow Down</td><td><a href="https://music.apple.com/jp/search?term=Lionel+Richie+Can%27t+Slow+Down" target="_blank">Search</a></td></tr>
-      <tr><td class="no">070</td><td>James Taylor</td><td>Flag</td><td><a href="https://music.apple.com/jp/search?term=James+Taylor+Flag" target="_blank">Search</a></td></tr>
-      <tr><td class="no">074</td><td>Various Artists</td><td>St. Elmo's Fire (O.S.T.)</td><td><a href="https://music.apple.com/jp/search?term=St.+Elmo%27s+Fire+Soundtrack" target="_blank">Search</a></td></tr>
-      <tr><td class="no">078</td><td>Stanley Clarke</td><td>Modern Man</td><td><a href="https://music.apple.com/jp/search?term=Stanley+Clarke+Modern+Man" target="_blank">Search</a></td></tr>
-      <tr><td class="no">080</td><td>Stephen Bishop</td><td>Red Cab to Manhattan</td><td><a href="https://music.apple.com/jp/search?term=Stephen+Bishop+Red+Cab+to+Manhattan" target="_blank">Search</a></td></tr>
-      <tr><td class="no">084</td><td>Boz Scaggs</td><td>Silk Degrees</td><td><a href="https://music.apple.com/jp/search?term=Boz+Scaggs+Silk+Degrees" target="_blank">Search</a></td></tr>
-      <tr><td class="no">090</td><td>Keane Brothers</td><td>Taking Off</td><td><a href="https://music.apple.com/jp/search?term=Keane+Brothers+Taking+Off" target="_blank">Search</a></td></tr>
-      <tr><td class="no">094</td><td>Deniece Williams</td><td>When Love Comes Calling</td><td><a href="https://music.apple.com/jp/search?term=Deniece+Williams+When+Love+Comes+Calling" target="_blank">Search</a></td></tr>
-      <tr><td class="no">098</td><td>Nielsen-Pearson</td><td>Nielsen-Pearson</td><td><a href="https://music.apple.com/jp/search?term=Nielsen-Pearson+Nielsen-Pearson" target="_blank">Search</a></td></tr>
-      <tr><td class="no">100</td><td>Ned Doheny</td><td>Hard Candy</td><td><a href="https://music.apple.com/jp/search?term=Ned+Doheny+Hard+Candy" target="_blank">Search</a></td></tr>
-      <tr><td class="no">102</td><td>Ray Parker Jr. &amp; Raydio</td><td>Woman Needs Love</td><td><a href="https://music.apple.com/jp/search?term=Ray+Parker+Jr.+%26+Raydio+Woman+Needs+Love" target="_blank">Search</a></td></tr>
-      <tr><td class="no">104</td><td>The Crusaders</td><td>Street Life</td><td><a href="https://music.apple.com/jp/search?term=The+Crusaders+Street+Life" target="_blank">Search</a></td></tr>
-      <tr><td class="no">108</td><td>Randy Crawford</td><td>Secret Combination</td><td><a href="https://music.apple.com/jp/search?term=Randy+Crawford+Secret+Combination" target="_blank">Search</a></td></tr>
-      <tr><td class="no">110</td><td>Dr. John</td><td>City Lights</td><td><a href="https://music.apple.com/jp/search?term=Dr.+John+City+Lights" target="_blank">Search</a></td></tr>
-      <tr><td class="no">114</td><td>Aretha Franklin</td><td>Jump to It</td><td><a href="https://music.apple.com/jp/search?term=Aretha+Franklin+Jump+to+It" target="_blank">Search</a></td></tr>
-      <tr><td class="no">116</td><td>Earth, Wind &amp; Fire</td><td>Raise!</td><td><a href="https://music.apple.com/jp/search?term=Earth,+Wind+%26+Fire+Raise!" target="_blank">Search</a></td></tr>
-      <tr><td class="no">120</td><td>Steely Dan</td><td>Gaucho</td><td><a href="https://music.apple.com/jp/search?term=Steely+Dan+Gaucho" target="_blank">Search</a></td></tr>
-      <tr><td class="no">126</td><td>Greg Phillinganes</td><td>Significant Gains</td><td><a href="https://music.apple.com/jp/search?term=Greg+Phillinganes+Significant+Gains" target="_blank">Search</a></td></tr>
-      <tr><td class="no">128</td><td>Stevie Wonder</td><td>Hotter Than July</td><td><a href="https://music.apple.com/jp/search?term=Stevie+Wonder+Hotter+Than+July" target="_blank">Search</a></td></tr>
-      <tr><td class="no">130</td><td>Larsen-Feiten Band</td><td>Larsen-Feiten Band</td><td><a href="https://music.apple.com/jp/search?term=Larsen-Feiten+Band" target="_blank">Search</a></td></tr>
-      <tr><td class="no">134</td><td>Bill Champlin</td><td>Single</td><td><a href="https://music.apple.com/jp/search?term=Bill+Champlin+Single" target="_blank">Search</a></td></tr>
-      <tr><td class="no">136</td><td>Dionne Warwick</td><td>Friends in Love</td><td><a href="https://music.apple.com/jp/search?term=Dionne+Warwick+Friends+in+Love" target="_blank">Search</a></td></tr>
-      <tr><td class="no">138</td><td>Jay Gruska</td><td>Which One of Us Is Me</td><td><a href="https://music.apple.com/jp/search?term=Jay+Gruska+Which+One+of+Us+Is+Me" target="_blank">Search</a></td></tr>
-      <tr><td class="no">140</td><td>Michael Sembello</td><td>Bossa Nova Hotel</td><td><a href="https://music.apple.com/jp/search?term=Michael+Sembello+Bossa+Nova+Hotel" target="_blank">Search</a></td></tr>
-      <tr><td class="no">142</td><td>Champaign</td><td>How 'Bout Us</td><td><a href="https://music.apple.com/jp/search?term=Champaign+How+%27Bout+Us" target="_blank">Search</a></td></tr>
-      <tr><td class="no">146</td><td>Hall &amp; Oates</td><td>Private Eyes</td><td><a href="https://music.apple.com/jp/search?term=Hall+%26+Oates+Private+Eyes" target="_blank">Search</a></td></tr>
-      <tr><td class="no">148</td><td>Michael Franks</td><td>Burchfield Nines</td><td><a href="https://music.apple.com/jp/search?term=Michael+Franks+Burchfield+Nines" target="_blank">Search</a></td></tr>
-      <tr><td class="no">152</td><td>Donald Fagen</td><td>The Nightfly</td><td><a href="https://music.apple.com/jp/search?term=Donald+Fagen+The+Nightfly" target="_blank">Search</a></td></tr>
-      <tr><td class="no">158</td><td>Carly Simon</td><td>Torch</td><td><a href="https://music.apple.com/jp/search?term=Carly+Simon+Torch" target="_blank">Search</a></td></tr>
-      <tr><td class="no">162</td><td>Bob James &amp; David Sanborn</td><td>Double Vision</td><td><a href="https://music.apple.com/jp/search?term=Bob+James+%26+David+Sanborn+Double+Vision" target="_blank">Search</a></td></tr>
-      <tr><td class="no">164</td><td>The Manhattan Transfer</td><td>Extensions</td><td><a href="https://music.apple.com/jp/search?term=The+Manhattan+Transfer+Extensions" target="_blank">Search</a></td></tr>
-      <tr><td class="no">166</td><td>Lee Ritenour</td><td>Rit</td><td><a href="https://music.apple.com/jp/search?term=Lee+Ritenour+Rit" target="_blank">Search</a></td></tr>
-      <tr><td class="no">170</td><td>Average White Band</td><td>Shine</td><td><a href="https://music.apple.com/jp/search?term=Average+White+Band+Shine" target="_blank">Search</a></td></tr>
-      <tr><td class="no">174</td><td>Herb Alpert</td><td>Rise</td><td><a href="https://music.apple.com/jp/search?term=Herb+Alpert+Rise" target="_blank">Search</a></td></tr>
-      <tr><td class="no">176</td><td>Roberta Flack</td><td>Bustin' Loose</td><td><a href="https://music.apple.com/jp/search?term=Roberta+Flack+Bustin%27+Loose" target="_blank">Search</a></td></tr>
-      <tr><td class="no">178</td><td>Tom Snow</td><td>Hungry Nights</td><td><a href="https://music.apple.com/jp/search?term=Tom+Snow+Hungry+Nights" target="_blank">Search</a></td></tr>
-      <tr><td class="no">182</td><td>Patti Austin</td><td>Every Home Should Have One</td><td><a href="https://music.apple.com/jp/search?term=Patti+Austin+Every+Home+Should+Have+One" target="_blank">Search</a></td></tr>
-      <tr><td class="no">184</td><td>Johnny Mathis</td><td>I Love My Lady</td><td><a href="https://music.apple.com/jp/search?term=Johnny+Mathis+I+Love+My+Lady" target="_blank">Search</a></td></tr>
-      <tr><td class="no">186</td><td>Brothers Johnson</td><td>Light Up the Night</td><td><a href="https://music.apple.com/jp/search?term=Brothers+Johnson+Light+Up+the+Night" target="_blank">Search</a></td></tr>
-      <tr><td class="no">188</td><td>The Doobie Brothers</td><td>Minute By Minute</td><td><a href="https://music.apple.com/jp/search?term=The+Doobie+Brothers+Minute+By+Minute" target="_blank">Search</a></td></tr>
-      <tr><td class="no">194</td><td>Michael McDonald</td><td>If That's What It Takes</td><td><a href="https://music.apple.com/jp/search?term=Michael+McDonald+If+That%27s+What+It+Takes" target="_blank">Search</a></td></tr>
-      <tr><td class="no">198</td><td>Robbie Dupree</td><td>Robbie Dupree</td><td><a href="https://music.apple.com/jp/search?term=Robbie+Dupree+Robbie+Dupree" target="_blank">Search</a></td></tr>
-      <tr><td class="no">202</td><td>Amy Holland</td><td>Amy Holland</td><td><a href="https://music.apple.com/jp/search?term=Amy+Holland+Amy+Holland" target="_blank">Search</a></td></tr>
-      <tr><td class="no">204</td><td>Herbie Hancock</td><td>Feets, Don't Fail Me Now</td><td><a href="https://music.apple.com/jp/search?term=Herbie+Hancock+Feets,+Don%27t+Fail+Me+Now" target="_blank">Search</a></td></tr>
-      <tr><td class="no">206</td><td>George Duke</td><td>A Brazilian Love Affair</td><td><a href="https://music.apple.com/jp/search?term=George+Duke+A+Brazilian+Love+Affair" target="_blank">Search</a></td></tr>
-      <tr><td class="no">208</td><td>Sergio Mendes</td><td>Sergio Mendes</td><td><a href="https://music.apple.com/jp/search?term=Sergio+Mendes+Sergio+Mendes" target="_blank">Search</a></td></tr>
-      <tr><td class="no">212</td><td>Julio Iglesias</td><td>1100 Bel Air Place</td><td><a href="https://music.apple.com/jp/search?term=Julio+Iglesias+1100+Bel+Air+Place" target="_blank">Search</a></td></tr>
-      <tr><td class="no">216</td><td>Marvin Gaye</td><td>Midnight Love</td><td><a href="https://music.apple.com/jp/search?term=Marvin+Gaye+Midnight+Love" target="_blank">Search</a></td></tr>
-      <tr><td class="no">220</td><td>Grover Washington Jr.</td><td>Winelight</td><td><a href="https://music.apple.com/jp/search?term=Grover+Washington+Jr.+Winelight" target="_blank">Search</a></td></tr>
-      <tr><td class="no">222</td><td>Rickie Lee Jones</td><td>Rickie Lee Jones</td><td><a href="https://music.apple.com/jp/search?term=Rickie+Lee+Jones+Rickie+Lee+Jones" target="_blank">Search</a></td></tr>
-      <tr><td class="no">228</td><td>Al Jarreau</td><td>Jarreau</td><td><a href="https://music.apple.com/jp/search?term=Al+Jarreau+Jarreau" target="_blank">Search</a></td></tr>
-      <tr><td class="no">232</td><td>George Benson</td><td>Breezin'</td><td><a href="https://music.apple.com/jp/search?term=George+Benson+Breezin%27" target="_blank">Search</a></td></tr>
-      <tr><td class="no">236</td><td>Gino Vannelli</td><td>Nightwalker</td><td><a href="https://music.apple.com/jp/search?term=Gino+Vannelli+Nightwalker" target="_blank">Search</a></td></tr>
-      <tr><td class="no">238</td><td>Seawind</td><td>Light the Light</td><td><a href="https://music.apple.com/jp/search?term=Seawind+Light+the+Light" target="_blank">Search</a></td></tr>
-      <tr><td class="no">240</td><td>Steve Kipner</td><td>Knock The Walls Down</td><td><a href="https://music.apple.com/jp/search?term=Steve+Kipner+Knock+The+Walls+Down" target="_blank">Search</a></td></tr>
-      <tr><td class="no">244</td><td>Kenny Loggins</td><td>Keep the Fire</td><td><a href="https://music.apple.com/jp/search?term=Kenny+Loggins+Keep+the+Fire" target="_blank">Search</a></td></tr>
-      <tr><td class="no">246</td><td>Bobby Caldwell</td><td>Bobby Caldwell</td><td><a href="https://music.apple.com/jp/search?term=Bobby+Caldwell+Bobby+Caldwell" target="_blank">Search</a></td></tr>
-      <tr><td class="no">250</td><td>Jackson Browne</td><td>Running On Empty</td><td><a href="https://music.apple.com/jp/search?term=Jackson+Browne+Running+On+Empty" target="_blank">Search</a></td></tr>
-      <tr><td class="no">254</td><td>Alessi Brothers</td><td>Long Time Friends</td><td><a href="https://music.apple.com/jp/search?term=Alessi+Brothers+Long+Time+Friends" target="_blank">Search</a></td></tr>
-      <tr><td class="no">258</td><td>Quincy Jones</td><td>The Dude</td><td><a href="https://music.apple.com/jp/search?term=Quincy+Jones+The+Dude" target="_blank">Search</a></td></tr>
-      <tr><td class="no">260</td><td>Donna Summer</td><td>Donna Summer</td><td><a href="https://music.apple.com/jp/search?term=Donna+Summer+Donna+Summer" target="_blank">Search</a></td></tr>
-      <tr><td class="no">262</td><td>Michael Jackson</td><td>Thriller</td><td><a href="https://music.apple.com/jp/search?term=Michael+Jackson+Thriller" target="_blank">Search</a></td></tr>
-    </tbody>
+    <tbody id="tbody"></tbody>
   </table>
 </div>
+<script>
+const albums = [
+  ["Airplay", "Airplay"],
+  ["Christopher Cross", "Christopher Cross"],
+  ["Larry John McNally", "Larry John McNally"],
+  ["J.D. Souther", "You're Only Lonely"],
+  ["Eagles", "Hotel California"],
+  ["Pages", "Pages"],
+  ["Player", "Player"],
+  ["Chicago", "Chicago 16"],
+  ["Pat Metheny Group", "American Garage"],
+  ["David Roberts", "All Dressed Up"],
+  ["TOTO", "TOTO IV"],
+  ["Brenda Russell", "Two Eyes"],
+  ["Nick DeCaro", "Italian Graffiti"],
+  ["Marc Jordan", "Blue Desert"],
+  ["Bill LaBounty", "Bill LaBounty"],
+  ["Lionel Richie", "Can't Slow Down"],
+  ["James Taylor", "Flag"],
+  ["Various Artists", "St. Elmo's Fire"],
+  ["Stanley Clarke", "Modern Man"],
+  ["Stephen Bishop", "Red Cab to Manhattan"],
+  ["Boz Scaggs", "Silk Degrees"],
+  ["Keane Brothers", "Taking Off"],
+  ["Deniece Williams", "When Love Comes Calling"],
+  ["Nielsen-Pearson", "Nielsen-Pearson"],
+  ["Ned Doheny", "Hard Candy"],
+  ["Ray Parker Jr. & Raydio", "Woman Needs Love"],
+  ["The Crusaders", "Street Life"],
+  ["Randy Crawford", "Secret Combination"],
+  ["Dr. John", "City Lights"],
+  ["Aretha Franklin", "Jump to It"],
+  ["Earth, Wind & Fire", "Raise!"],
+  ["Steely Dan", "Gaucho"],
+  ["Greg Phillinganes", "Significant Gains"],
+  ["Stevie Wonder", "Hotter Than July"],
+  ["Larsen-Feiten Band", "Larsen-Feiten Band"],
+  ["Bill Champlin", "Single"],
+  ["Dionne Warwick", "Friends in Love"],
+  ["Jay Gruska", "Which One of Us Is Me"],
+  ["Michael Sembello", "Bossa Nova Hotel"],
+  ["Champaign", "How 'Bout Us"],
+  ["Hall & Oates", "Private Eyes"],
+  ["Michael Franks", "Burchfield Nines"],
+  ["Donald Fagen", "The Nightfly"],
+  ["Carly Simon", "Torch"],
+  ["Bob James & David Sanborn", "Double Vision"],
+  ["The Manhattan Transfer", "Extensions"],
+  ["Lee Ritenour", "Rit"],
+  ["Average White Band", "Shine"],
+  ["Herb Alpert", "Rise"],
+  ["Roberta Flack", "Bustin' Loose"],
+  ["Tom Snow", "Hungry Nights"],
+  ["Patti Austin", "Every Home Should Have One"],
+  ["Johnny Mathis", "I Love My Lady"],
+  ["Brothers Johnson", "Light Up the Night"],
+  ["The Doobie Brothers", "Minute By Minute"],
+  ["Michael McDonald", "If That's What It Takes"],
+  ["Robbie Dupree", "Robbie Dupree"],
+  ["Amy Holland", "Amy Holland"],
+  ["Herbie Hancock", "Feets, Don't Fail Me Now"],
+  ["George Duke", "A Brazilian Love Affair"],
+  ["Sergio Mendes", "Sergio Mendes"],
+  ["Julio Iglesias", "1100 Bel Air Place"],
+  ["Marvin Gaye", "Midnight Love"],
+  ["Grover Washington Jr.", "Winelight"],
+  ["Rickie Lee Jones", "Rickie Lee Jones"],
+  ["Al Jarreau", "Jarreau"],
+  ["George Benson", "Breezin'"],
+  ["Gino Vannelli", "Nightwalker"],
+  ["Seawind", "Light the Light"],
+  ["Steve Kipner", "Knock The Walls Down"],
+  ["Kenny Loggins", "Keep the Fire"],
+  ["Bobby Caldwell", "Bobby Caldwell"],
+  ["Jackson Browne", "Running On Empty"],
+  ["Alessi Brothers", "Long Time Friends"],
+  ["Quincy Jones", "The Dude"],
+  ["Donna Summer", "Donna Summer"],
+  ["Michael Jackson", "Thriller"],
+];
+
+async function openAppleMusic(artist, album, linkEl) {
+  linkEl.textContent = "…";
+  linkEl.style.pointerEvents = "none";
+  const term = encodeURIComponent(artist + " " + album);
+  try {
+    const res = await fetch(
+      `https://itunes.apple.com/search?term=${term}&entity=album&country=jp&limit=5`
+    );
+    const data = await res.json();
+    if (data.results && data.results.length > 0) {
+      const hit = data.results.find(r =>
+        r.collectionName.toLowerCase().includes(album.toLowerCase())
+      ) || data.results[0];
+      window.open(hit.collectionViewUrl, "_blank");
+    } else {
+      window.open(`https://music.apple.com/jp/search?term=${term}`, "_blank");
+    }
+  } catch {
+    window.open(`https://music.apple.com/jp/search?term=${term}`, "_blank");
+  } finally {
+    linkEl.textContent = "Open";
+    linkEl.style.pointerEvents = "";
+  }
+}
+
+const tbody = document.getElementById("tbody");
+albums.forEach(([artist, album], i) => {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td class="no">${i + 1}</td>
+    <td>${artist}</td>
+    <td>${album}</td>
+    <td><a>Open</a></td>
+  `;
+  const link = tr.querySelector("a");
+  link.addEventListener("click", () => openAppleMusic(artist, album, link));
+  tbody.appendChild(tr);
+});
+</script>
 </body>
 </html>
